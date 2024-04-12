@@ -11,5 +11,5 @@ A repository of group policy editor flags that need to be set to make windows a 
 ## Disable Windows CoPilot Integration
 <p> Windows 11 (and potentially Windows 10) <br>
     Windows now has copilot integration. If you dont want this, set the following path: <br>
-    *gpedit.exe ->User Configuration ->Administrative Templates ->Windows Components ->Windows Copilot ->set Turn off Windows Copilot to Enabled *
+    gpedit.exe ->User Configuration ->Administrative Templates ->Windows Components ->Windows Copilot ->set Turn off Windows Copilot to Enabled
 </p>
