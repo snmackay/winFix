@@ -13,35 +13,44 @@
 ## Disable Windows CoPilot Integration
 <p> Windows 11 (and potentially Windows 10) <br>
     Windows now has copilot integration. If you dont want this, set the following path: <br>
+    
     gpedit.exe ->User Configuration ->Administrative Templates ->Windows Components ->Windows Copilot ->Turn off Windows Copilot ->Enabled
 </p>
 
 ## Disable Automatic Updates
 <p> Windows 10 & Windows 11 <br>
+    
     gpedit.exe ->Computer Configuration ->Administrative Templates ->Windows Components ->Windows Update ->Manage end user experience ->Configure Automatic Updates ->Disabled
 </p>
 
 ## Disable Driver Updates in Windows Update
 <p> Windows 10 & Windows 11 (windows 11 has a setting in settings for this on Windows 11 pro) <br>
     Note: On Windows 11 on some OEM systems not setting this will allow your bios to get automatically updated. This is NOT A GOOD IDEA. <br>
-    Win10: gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Do not Include drivers with Windows Update ->Enabled <br>
-    Win11: gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Manages updates offered from Windows Update -> Do not include drivers with Windows Update ->Enabled <br>
+    Win10: <br>
+    
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Do not Include drivers with Windows Update ->Enabled 
+Win11: 
+
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Manages updates offered from Windows Update -> Do not include drivers with Windows Update ->Enabled 
 </p>
 
 ## Remove Web Results From Search
 <p> Windows 11 and Windows 10 <br>
     Microsoft loves to add web content to search as well as index a lot of stuff. The directory in gpe linked here has a bunch of stuff worth flagging <br>
-    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Don't search the web or display web results in Search ->Enabled <br>
-    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Don't search the web or display web results in Search over metered connections ->Enabled <br>
-    Optional: <br>
-    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing email attachments ->Enabled <br>
-    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing Microsoft Office Outlook ->Enabled <br>    
+    
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Don't search the web or display web results in Search ->Enabled 
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Don't search the web or display web results in Search over metered connections ->Enabled 
+Optional: <br>
+ 
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing email attachments ->Enabled 
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing Microsoft Office Outlook ->Enabled   
 </p>
 
 ## Permanently Remove OneDrive
 <p> Windows 11 and Windows 10<br>
     This one is not essential but its probably for the best to do it. Onedrive can reinstall itself and if you use an online account it can mess up<br>
-    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > OneDrive -> Prevent the usage of OneDrive for file storage -> Enabled <br>
+    
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > OneDrive -> Prevent the usage of OneDrive for file storage -> Enabled 
 
 </p>
 
@@ -49,13 +58,18 @@
 
 ## Restore Old Right Click Context Menu on Windows 11
 <p> This is useful if you want the old context menu <br>
-    ADDING: <br>
-        1: Run Windows Terminal as admin <br>
-        2: Run the following command: reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve <br>
-        3: Restart <br>
-    Restore (Useful to do before updating Windows 11): <br>
-        1: Run Windows Terminal as admin <br>
-        2: Run the following command: reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f <br>
-        3: Restart <br>
 
+**ADDING** : <br>
+1: Run Windows Terminal as admin<br> 
+2: Run the following command: <br>
+    
+    reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve             
+3: Restart <br>
+<br>    
+**RESTORE** (Useful to do before updating Windows 11): <br>
+1: Run Windows Terminal as admin <br>
+2: Run the following command: <br>
+        
+    reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f 
+3: Restart <br>
 </p>
