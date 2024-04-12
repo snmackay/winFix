@@ -1,7 +1,9 @@
 # winFix
-A repository of group policy editor flags that need to be set to make windows a useful operating system.
+<p> A repository of group policy editor flags and regedit commands that need to be set to make windows a useful operating system. <br>
+    WARNING: no warranty is implied with any of this. You break your OS its your problem not mine. <br>    
+</p>
 
-# Flags
+# Group Policy Editor Flags
 <p> The following are flags that need to be set via group policy editor. Note that this only works on windows
     11 Pro and not Home as gpedit.exe is not accessible on the home version of Windows 11. If you are on windows
     10 this is not a problem and will work on all versions of the operating system. Note that some of the flags
@@ -40,5 +42,20 @@ A repository of group policy editor flags that need to be set to make windows a 
 <p> Windows 11 and Windows 10<br>
     This one is not essential but its probably for the best to do it. Onedrive can reinstall itself and if you use an online account it can mess up<br>
     gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > OneDrive -> Prevent the usage of OneDrive for file storage -> Enabled <br>
+
+</p>
+
+# Regedit Tweaks
+
+## Restore Old Right Click Context Menu on Windows 11
+<p> This is useful if you want the old context menu <br>
+    ADDING: <br>
+        1: Run Windows Terminal as admin <br>
+        2: Run the following command: reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve <br>
+        3: Restart <br>
+    Restore (Useful to do before updating Windows 11): <br>
+        1: Run Windows Terminal as admin <br>
+        2: Run the following command: reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f <br>
+        3: Restart <br>
 
 </p>
