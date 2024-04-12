@@ -62,16 +62,32 @@ Optional: <br>
 <p> This is useful if you want the old context menu <br>
 
 **ADDING** : <br>
-1: Run Windows Terminal as admin<br> 
-2: Run the following command: <br>
+
+    1: Run Windows Terminal as admin
+    2: Run the following command:
     
-    reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve             
-3: Restart <br>
+        reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve    
+    
+    3: Restart 
 <br>    
 **RESTORE** (Useful to do before updating Windows 11): <br>
-1: Run Windows Terminal as admin <br>
-2: Run the following command: <br>
-        
-    reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f 
-3: Restart <br>
+
+    1: Run Windows Terminal as admin 
+    2: Run the following command:     
+    
+        reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f 
+    
+    3: Restart
+</p>
+
+## Disabling TPM2 Requirement
+<p> You can do this while making your installer with Rufus OR run the following command during the installation:
+
+    Shift + F10
+    >regedit
+    Navigate to HKEY_LOCAL_MACHINE\SYSTEM\Setup
+    Create new key named LabConfig
+    Within LabConfig create DWORDS values called BypassTPMCheck & BypassSecureBootCheck
+    Set each of these 1. 
+    
 </p>
