@@ -45,7 +45,7 @@
 
 </p>
 
-# Regedit Tweaks
+# Registry Tweaks
 
 ## Restore Old Right Click Context Menu on Windows 11
 <p> This is useful if you want the old context menu <br>
