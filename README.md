@@ -35,3 +35,10 @@ A repository of group policy editor flags that need to be set to make windows a 
     gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing email attachments ->Enabled <br>
     gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing Microsoft Office Outlook ->Enabled <br>    
 </p>
+
+## Permanently Remove OneDrive
+<p> Windows 11 and Windows 10<br>
+    This one is not essential but its probably for the best to do it. Onedrive can reinstall itself and if you use an online account it can mess up<br>
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > OneDrive -> Prevent the usage of OneDrive for file storage -> Enabled <br>
+
+</p>
