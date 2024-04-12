@@ -18,3 +18,9 @@ A repository of group policy editor flags that need to be set to make windows a 
 <p> Windows 10 & Windows 11 <br>
     gpedit.exe ->Computer Configuration ->Administrative Templates ->Windows Components ->Windows Update ->Manage end user experience ->Configure Automatic Updates ->Disabled
 </p>
+
+## Disable Driver Updates in Windows Update
+<p> Windows 10 & Windows 11 (windows 11 has a setting in settings for this on Windows 11 pro) <br>
+    Win10: gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Do not Include drivers with Windows Update ->Enabled <br>
+    Win11: gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Manages updates offered from Windows Update -> Do not include drivers with Windows Update ->Enabled <br>
+</p>
