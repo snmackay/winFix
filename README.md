@@ -2,6 +2,7 @@
 <p> A repository of group policy editor flags and regedit commands that need to be set to make windows a useful operating system. <br>
     WARNING: no warranty is implied with any of this. You break your OS its your problem not mine. <br>    
 </p>
+<br>
 
 # Group Policy Editor Flags
 <p> The following are flags that need to be set via group policy editor. Note that this only works on windows
@@ -53,6 +54,7 @@ Optional: <br>
     gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > OneDrive -> Prevent the usage of OneDrive for file storage -> Enabled 
 
 </p>
+<br>
 
 # Registry Tweaks
 
