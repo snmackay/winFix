@@ -24,3 +24,13 @@ A repository of group policy editor flags that need to be set to make windows a 
     Win10: gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Do not Include drivers with Windows Update ->Enabled <br>
     Win11: gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Windows Update ->Manages updates offered from Windows Update -> Do not include drivers with Windows Update ->Enabled <br>
 </p>
+
+## Remove Web Results From Search
+<p> Windows 11 and Windows 10 <br>
+    Microsoft loves to add web content to search as well as index a lot of stuff. The directory in gpe linked here has a bunch of stuff worth flagging <br>
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Don't search the web or display web results in Search ->Enabled <br>
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Don't search the web or display web results in Search over metered connections ->Enabled <br>
+    Optional: <br>
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing email attachments ->Enabled <br>
+    gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > Search ->Prevent indexing Microsoft Office Outlook ->Enabled <br>    
+</p>
