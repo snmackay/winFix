@@ -54,6 +54,15 @@ Optional: <br>
     gpedit.exe ->Computer Configuration > Administrative Templates > Windows Components > OneDrive -> Prevent the usage of OneDrive for file storage -> Enabled 
 
 </p>
+
+## Disable Single-Sign On For Accounts
+<p>
+    This will allow you to have a local account that doesn't randomly get turned into an online account if you sign into microsoft somewhere. <br>
+    Works in Windows 10 and Windows 11. <br>
+
+    gpedit.exe ->Computer Configuration ->Windows Settings ->Security Settings ->Security Options ->Accounts: Block Microsoft Accounts ->Users can't add or log on with Microsoft Accounts
+    
+</p>
 <br>
 
 # Registry Tweaks
